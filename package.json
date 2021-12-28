@@ -1,0 +1,44 @@
+{
+  "name": "releasy",
+  "version": "1.0.8",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@octokit/rest": "^18.0.6",
+    "@slack/web-api": "^5.8.0",
+    "axios": "^0.19.2",
+    "clubhouse-lib": "^0.10.0",
+    "confluence-api": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.2",
+    "gh-release": "^4.0.2",
+    "moment": "^2.24.0",
+    "octokit": "^1.0.0-hello-world",
+    "semver": "^7.3.2",
+    "yargs": "^15.3.1"
+  },
+  "bin": {
+    "releasy": "index.js"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-chai-friendly": "^0.7.1",
+    "eslint-plugin-cypress": "^2.11.3",
+    "eslint-plugin-jsdoc": "^35.2.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-sort-class-members": "^1.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aplazame/releasy.git"
+  },
+  "author": "Aplazame's QA Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aplazame/releasy/issues"
+  },
+  "homepage": "https://github.com/aplazame/releasy#readme"
+}

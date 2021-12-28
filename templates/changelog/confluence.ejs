@@ -1,0 +1,127 @@
+<html>
+<body>
+<h2> Main Release Data: </h2>
+<br></br>
+<table width="800px" style="table-layout: fixed">
+        <tr>
+            <th>
+                Application:
+            </th>
+            <th>
+                Release Tag | Link :
+            </th>
+            <th>
+                Date:
+            </th>
+            <th>
+                Time:
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <a href="https://github.com/aplazame/<%= appName %>"><%= appName %></a>
+            </td>
+            <td>
+                <a href="https://github.com/aplazame/<%= appName %>/releases/tag/<%= release.name %>"><%= release.name %></a> 
+            </td>
+            <td>
+                <%= release.date %>
+            </td>
+            <td>
+                <%= release.time %>
+            </td>
+        </tr>
+    </table>
+<br></br>
+
+<h2> Content Uploaded to Production: </h2>
+<br></br>
+<% if(features.length > 0) { %>
+    <table width="800px" style="table-layout: fixed">
+        <tr>
+            <th width="600px">
+                <img class="emoticon emoticon-plus" data-emoji-id="atlassian-plus" data-emoji-shortname=":plus:" data-emoji-fallback=":plus:" src="/wiki/s/233759014/6452/e923f0ac9a7cb52dd7ed68e8804f3d4c59f2476d/_/images/icons/emoticons/add.png" data-emoticon-name="plus" alt="(plus)"></img> Features:
+            </th>
+        </tr>
+        <% for (index in features)  { %>
+        <tr>
+            <td>
+                · <%- features[index].url %>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+<% } %>
+<br></br>
+<% if(fixes.length > 0) { %>
+    <table width="800px">
+        <tr>
+            <th width="600px">
+                <img class="emoticon emoticon-warning" title="Warning (!)" src="https://aplazame.atlassian.net/wiki/s/233759014/6452/e923f0ac9a7cb52dd7ed68e8804f3d4c59f2476d/_/images/icons/emoticons/warning.png" alt="Warning (!)" border="0" data-emoticon-name="warning" data-mce-src="https://aplazame.atlassian.net/wiki/s/233759014/6452/e923f0ac9a7cb52dd7ed68e8804f3d4c59f2476d/_/images/icons/emoticons/warning.png"></img> Fixes:
+            </th>
+        </tr>
+        <% for (index in fixes)  { %>
+        <tr>
+            <td>
+                · <%- fixes[index].url %>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+<% } %>
+<br></br>
+<% if(chores.length > 0) { %>
+    <table width="800px">
+        <tr>
+            <th width="600px">
+                <img class="emoticon emoticon-light-on" data-emoji-id="atlassian-light_bulb_on" data-emoji-shortname=":light_bulb_on:" data-emoji-fallback=":light_bulb_on:" src="/wiki/s/233759014/6452/e923f0ac9a7cb52dd7ed68e8804f3d4c59f2476d/_/images/icons/emoticons/lightbulb_on.png" data-emoticon-name="light-on" alt="(lightbulb)"></img> Chores:
+            </th>
+        </tr>
+        <% for (index in chores)  { %>
+        <tr>
+            <td>
+                · <%- chores[index].url %>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+<% } %>
+<br></br>
+
+<% if(reverts.length > 0) { %>
+    <table width="800px">
+        <tr>
+            <th width="600px">
+                <img class="emoticon emoticon-light-off" title="Lightbulb off (off)" src="https://aplazame.atlassian.net/wiki/s/233759014/6452/e923f0ac9a7cb52dd7ed68e8804f3d4c59f2476d/_/images/icons/emoticons/lightbulb.png" alt="Lightbulb off (off)" border="0" data-emoticon-name="light-off" data-mce-src="https://aplazame.atlassian.net/wiki/s/233759014/6452/e923f0ac9a7cb52dd7ed68e8804f3d4c59f2476d/_/images/icons/emoticons/lightbulb.png"></img> Reverts:
+            </th>
+        </tr>
+        <% for (index in reverts)  { %>
+        <tr>
+            <td>
+                · <%- reverts[index].url %>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+<% } %>
+<br></br>
+
+<% if(hotfixes.length > 0) { %>
+    <table width="800px">
+        <tr>
+            <th width="600px">
+                <img class="emoticon emoticon-red-star" title="Red star (*r)" src="https://aplazame.atlassian.net/wiki/s/233759014/6452/e923f0ac9a7cb52dd7ed68e8804f3d4c59f2476d/_/images/icons/emoticons/star_red.png" alt="Red star (*r)" border="0" data-emoticon-name="red-star" data-mce-src="https://aplazame.atlassian.net/wiki/s/233759014/6452/e923f0ac9a7cb52dd7ed68e8804f3d4c59f2476d/_/images/icons/emoticons/star_red.png"></img> Hotfixes:
+            </th>
+        </tr>
+        <% for (index in hotfixes)  { %>
+        <tr>
+            <td>
+                · <%- hotfixes[index].url %>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+<% } %>
+<br></br>
+</body>
+</html>

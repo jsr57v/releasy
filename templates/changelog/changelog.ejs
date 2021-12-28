@@ -1,0 +1,23 @@
+# Changelog
+
+<% if(features.length > 0 || fixes.length > 0 ) { %>
+## :rocket:Release: <%= release.name %> [<%= release.date %> - <%= release.time %>] :rocket:
+<% } if (features.length > 0) { %>
+*:boom: New Features:*<br />
+<% for (index in features ) { -%>
+• <%- features[index].changelog %> <% if (features[index].PR ) {%> (#<%- features[index].PR %>)[<%- features[index].PRLink %>]<% } %><br />
+<% } } if(fixes.length > 0) { -%>
+*:bug: Fixes:*<br />
+<% for ( index in fixes ) { -%>
+• <%- fixes[index].changelog %> <% if (fixes[index].PR ) {%> (#<%- fixes[index].PR %>)[<%- fixes[index].PRLink %>]<% } %><br />
+<% } } if(chores.length > 0) {-%>
+*:wrench: Chores:*<br />
+<% for ( index in chores ) { -%>
+• <%- chores[index].changelog %> <% if (chores[index].PR ) {%> (#<%- chores[index].PR %>)[<%- chores[index].PRLink %>]<% } %><br />
+<% } } if(reverts.length > 0) {-%>
+*:back: Reverts:*<br />
+<% for ( index in reverts ) { -%>
+• <%- reverts[index].changelog %> <% if (reverts[index].PR ) {%> (#<%- reverts[index].PR %>)[<%- reverts[index].PRLink %>]<% } %><br />
+<% } } -%>
+
+<%= previousChangelog %>
